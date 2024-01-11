@@ -1,0 +1,818 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<eBiosig_General_Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="dd3105c3-3dc1-489d-903f-45bf53f12312" ver="" designer="Polybench 1.34.1.4500" minimal="1.34" xmlns="http://www.eBiosig.com">
+  <Caption>barotest</Caption>
+  <Contains>
+    <Page W="6400" H="5120">
+      <Caption>Design</Caption>
+      <Contains>
+        <Operator X="250" Y="240" W="78" H="60.0000038">
+          <Caption>call python</Caption>
+          <Contains>
+            <Port Y="30.0000019" W="20" H="20">
+              <Caption>action or S</Caption>
+              <PosHeading>West</PosHeading>
+              <IOIndex>0</IOIndex>
+              <Id>4f451f58-6156-4336-8278-a4385e478207</Id>
+              <InIndex>0</InIndex>
+              <IOType>Input</IOType>
+            </Port>
+            <Port X="39" Y="60.0000038" W="20" H="20">
+              <Caption>action or S</Caption>
+              <PosHeading>South</PosHeading>
+              <IOIndex>1</IOIndex>
+              <Id>8328adbf-c620-4bd8-8247-eafe406d561a</Id>
+              <InIndex>1</InIndex>
+              <IOType>Input</IOType>
+            </Port>
+            <Port X="78" Y="30" W="20" H="20">
+              <Caption>action</Caption>
+              <PosHeading>East</PosHeading>
+              <IOIndex>2</IOIndex>
+              <Id>7ef244d3-978f-4960-949f-33b3a670b7f1</Id>
+              <OutIndex>0</OutIndex>
+              <IOType>Output</IOType>
+            </Port>
+          </Contains>
+          <FromType>eBBaseLib.ActionSequenceStart</FromType>
+          <Id>7912e350-22ec-4a30-a1e3-f5b499cc98be</Id>
+          <NrOfInputs>2</NrOfInputs>
+          <NrOfOutputs>1</NrOfOutputs>
+          <MyProps xsi:type="ActionSeqStart">
+            <Caption>call python</Caption>
+            <TriggerInfo>Index</TriggerInfo>
+            <DelayedCall>0</DelayedCall>
+          </MyProps>
+          <SOffs>
+            <X>0</X>
+            <Y>0</Y>
+          </SOffs>
+        </Operator>
+        <Operator X="580" Y="230" W="60.0000038" H="60.0000038">
+          <Caption>Action</Caption>
+          <Contains>
+            <Port Y="30.0000019" W="20" H="20">
+              <Caption>action</Caption>
+              <PosHeading>West</PosHeading>
+              <IOIndex>0</IOIndex>
+              <Id>675ce011-9324-45c8-8cad-4adcb6998bb1</Id>
+              <InIndex>0</InIndex>
+              <IOType>Input</IOType>
+            </Port>
+            <Port X="30.0000019" Y="60.0000038" W="20" H="20">
+              <Caption>action</Caption>
+              <PosHeading>South</PosHeading>
+              <IOIndex>1</IOIndex>
+              <Id>93c5bc84-cd4a-4e58-9dc2-3a0d07b8b196</Id>
+              <InIndex>1</InIndex>
+              <IOType>Input</IOType>
+            </Port>
+            <Port X="60.0000038" Y="30" W="20" H="20">
+              <Caption>action</Caption>
+              <PosHeading>East</PosHeading>
+              <IOIndex>2</IOIndex>
+              <Id>1c0534d3-869d-4f68-b991-bc2b9c694d6f</Id>
+              <OutIndex>0</OutIndex>
+              <IOType>Output</IOType>
+            </Port>
+          </Contains>
+          <FromType>eBBaseLib.ActionOperator</FromType>
+          <Id>3ec0c417-bfee-4b3f-879a-3fffd0a16a34</Id>
+          <NrOfInputs>2</NrOfInputs>
+          <NrOfOutputs>1</NrOfOutputs>
+          <MyProps xsi:type="ActionOperator">
+            <Caption>Action</Caption>
+            <Action>START_EXTERN</Action>
+            <Value>C:\Users\vp-pi\pythonstuff\luchtdruk.py</Value>
+            <Address>python </Address>
+          </MyProps>
+          <SOffs>
+            <X>0</X>
+            <Y>0</Y>
+          </SOffs>
+        </Operator>
+        <ActionButton2 X="190" Y="80" W="120" H="50">
+          <Caption>LeesLuchtdrukSensor</Caption>
+          <Contains />
+          <Action>ACTIONSEQUENCE</Action>
+          <Address>$Design.call python$</Address>
+          <ButtonDescriptor>Default</ButtonDescriptor>
+          <ButtonText>LeesLuchtdrukSensor</ButtonText>
+        </ActionButton2>
+        <Operator X="350" Y="360" W="60.0000038" H="60.0000038">
+          <Caption>Signal Generator</Caption>
+          <Contains>
+            <Port X="60.0000038" Y="30" W="20" H="20">
+              <Caption>S</Caption>
+              <PosHeading>East</PosHeading>
+              <IOIndex>0</IOIndex>
+              <Id>dbb11463-9298-4f68-9165-33f42a8da178</Id>
+              <OutIndex>0</OutIndex>
+              <IOType>Output</IOType>
+            </Port>
+          </Contains>
+          <FromType>SignalProviders.FloatSignalGenerator</FromType>
+          <Id>ae619cb5-958d-44e8-9072-d4a94aa0c6d7</Id>
+          <NrOfInputs>0</NrOfInputs>
+          <NrOfOutputs>1</NrOfOutputs>
+          <MyProps xsi:type="FloatSignalGenerator">
+            <Caption>Signal Generator</Caption>
+            <ChanId>97329137-d9fc-4178-ba46-65175c3950f2</ChanId>
+            <ChanName>tijdklok</ChanName>
+            <ChanUnit />
+            <Signaltype>Sinus</Signaltype>
+            <SampleFrequency>1</SampleFrequency>
+            <SignalFrequency>1</SignalFrequency>
+            <Phase>0</Phase>
+            <Amplitude>1</Amplitude>
+          </MyProps>
+          <SOffs>
+            <X>0</X>
+            <Y>0</Y>
+          </SOffs>
+        </Operator>
+        <Operator X="480" Y="370" W="60.0000038" H="60.0000038">
+          <Caption>Counter</Caption>
+          <Contains>
+            <Port Y="30" W="20" H="20">
+              <Caption>Any</Caption>
+              <PosHeading>West</PosHeading>
+              <IOIndex>0</IOIndex>
+              <Id>a58f08aa-d510-4845-a689-ad09db875756</Id>
+              <InIndex>0</InIndex>
+              <IOType>Input</IOType>
+            </Port>
+            <Port X="30.0000019" Y="60.0000038" W="20" H="20">
+              <Caption>Reset</Caption>
+              <PosHeading>South</PosHeading>
+              <IOIndex>1</IOIndex>
+              <Id>968a2abe-2a9e-4958-9760-79ed4a5fbaae</Id>
+              <InIndex>1</InIndex>
+              <IOType>Input</IOType>
+            </Port>
+            <Port X="60.0000038" Y="30" W="20" H="20">
+              <Caption>Count</Caption>
+              <PosHeading>East</PosHeading>
+              <IOIndex>2</IOIndex>
+              <Id>94103a98-50f9-423c-9fb3-b6dae3035159</Id>
+              <OutIndex>0</OutIndex>
+              <IOType>Output</IOType>
+            </Port>
+          </Contains>
+          <FromType>eBBaseLib.Counter</FromType>
+          <Id>1e70e92e-28d2-4cf0-a9cf-8d85cead62d2</Id>
+          <NrOfInputs>2</NrOfInputs>
+          <NrOfOutputs>1</NrOfOutputs>
+          <MyProps xsi:type="Counter">
+            <Caption>Counter</Caption>
+          </MyProps>
+          <SOffs>
+            <X>0</X>
+            <Y>0</Y>
+          </SOffs>
+        </Operator>
+        <Operator X="680" Y="330" W="78" H="60.0000038">
+          <Caption>Numerical Display</Caption>
+          <Contains>
+            <Port Y="30" W="20" H="20">
+              <Caption>S[0]</Caption>
+              <PosHeading>West</PosHeading>
+              <IOIndex>0</IOIndex>
+              <Id>6421885e-1505-4f26-a591-4a2d132adde0</Id>
+              <InIndex>0</InIndex>
+              <IOType>Input</IOType>
+            </Port>
+          </Contains>
+          <FromType>eBFloatViewers.NumericalDisplay</FromType>
+          <Id>6d0cd116-1d92-4595-bf21-b41313b368db</Id>
+          <NrOfInputs>1</NrOfInputs>
+          <NrOfOutputs>0</NrOfOutputs>
+          <MyProps xsi:type="FloatNumericalDisplay">
+            <Caption>Numerical Display</Caption>
+            <FontName>Verdana</FontName>
+            <FontStdSize>22</FontStdSize>
+            <FontStl>Regular</FontStl>
+            <ContentPaneLeft>5</ContentPaneLeft>
+            <UnitPaneWidth>30</UnitPaneWidth>
+            <TitlePaneHeight>20</TitlePaneHeight>
+            <NumberFormat>&gt;;1</NumberFormat>
+            <InvalidValue />
+            <InvalidValueText />
+            <BackClr>-1</BackClr>
+            <ForeClr>-16777216</ForeClr>
+            <ContentClr>-16777216</ContentClr>
+            <BackColorName>Background</BackColorName>
+            <ForeColorName>Foreground</ForeColorName>
+            <ContentColorName>Foreground</ContentColorName>
+            <BorderStyle>SingleLine</BorderStyle>
+            <Content>InputValues</Content>
+          </MyProps>
+          <SOffs>
+            <X>0</X>
+            <Y>0</Y>
+          </SOffs>
+        </Operator>
+        <ObjectWithUI X="670" Y="510" W="140" H="65">
+          <Caption>Numerical Display</Caption>
+          <Contains />
+          <EngineId>6d0cd116-1d92-4595-bf21-b41313b368db</EngineId>
+        </ObjectWithUI>
+        <Connector Vis="true">
+          <Caption>101110</Caption>
+          <Edges>
+            <PointF>
+              <X>540</X>
+              <Y>400</Y>
+            </PointF>
+            <PointF>
+              <X>555</X>
+              <Y>400</Y>
+            </PointF>
+            <PointF>
+              <X>610</X>
+              <Y>400</Y>
+            </PointF>
+            <PointF>
+              <X>610</X>
+              <Y>360</Y>
+            </PointF>
+            <PointF>
+              <X>665</X>
+              <Y>360</Y>
+            </PointF>
+            <PointF>
+              <X>680</X>
+              <Y>360</Y>
+            </PointF>
+          </Edges>
+          <Src>94103a98-50f9-423c-9fb3-b6dae3035159</Src>
+          <Snk>6421885e-1505-4f26-a591-4a2d132adde0</Snk>
+        </Connector>
+        <Connector Vis="true">
+          <Caption>112710</Caption>
+          <Edges>
+            <PointF>
+              <X>410</X>
+              <Y>390</Y>
+            </PointF>
+            <PointF>
+              <X>425</X>
+              <Y>390</Y>
+            </PointF>
+            <PointF>
+              <X>445</X>
+              <Y>390</Y>
+            </PointF>
+            <PointF>
+              <X>445</X>
+              <Y>445</Y>
+            </PointF>
+            <PointF>
+              <X>510</X>
+              <Y>445</Y>
+            </PointF>
+            <PointF>
+              <X>510</X>
+              <Y>430</Y>
+            </PointF>
+          </Edges>
+          <Src>dbb11463-9298-4f68-9165-33f42a8da178</Src>
+          <Snk>968a2abe-2a9e-4958-9760-79ed4a5fbaae</Snk>
+        </Connector>
+        <Connector Vis="true">
+          <Caption>172710</Caption>
+          <Edges>
+            <PointF>
+              <X>410</X>
+              <Y>390</Y>
+            </PointF>
+            <PointF>
+              <X>425</X>
+              <Y>390</Y>
+            </PointF>
+            <PointF>
+              <X>445</X>
+              <Y>390</Y>
+            </PointF>
+            <PointF>
+              <X>445</X>
+              <Y>400</Y>
+            </PointF>
+            <PointF>
+              <X>465</X>
+              <Y>400</Y>
+            </PointF>
+            <PointF>
+              <X>480</X>
+              <Y>400</Y>
+            </PointF>
+          </Edges>
+          <Src>dbb11463-9298-4f68-9165-33f42a8da178</Src>
+          <Snk>a58f08aa-d510-4845-a689-ad09db875756</Snk>
+        </Connector>
+        <Operator X="410" Y="240" W="60.0000038" H="60.0000038">
+          <Caption>Action</Caption>
+          <Contains>
+            <Port Y="30.0000019" W="20" H="20">
+              <Caption>action</Caption>
+              <PosHeading>West</PosHeading>
+              <IOIndex>0</IOIndex>
+              <Id>33de0aa3-17fc-4233-be72-e31998ee3f52</Id>
+              <InIndex>0</InIndex>
+              <IOType>Input</IOType>
+            </Port>
+            <Port X="30.0000019" Y="60.0000038" W="20" H="20">
+              <Caption>action</Caption>
+              <PosHeading>South</PosHeading>
+              <IOIndex>1</IOIndex>
+              <Id>778b9894-5d0a-4e77-99d7-685222589b46</Id>
+              <InIndex>1</InIndex>
+              <IOType>Input</IOType>
+            </Port>
+            <Port X="60.0000038" Y="30" W="20" H="20">
+              <Caption>action</Caption>
+              <PosHeading>East</PosHeading>
+              <IOIndex>2</IOIndex>
+              <Id>39349493-bac8-421e-b3d7-695df14d764e</Id>
+              <OutIndex>0</OutIndex>
+              <IOType>Output</IOType>
+            </Port>
+          </Contains>
+          <FromType>eBBaseLib.ActionOperator</FromType>
+          <Id>352ad7c4-c177-4ae6-b11f-9d1ed05aed91</Id>
+          <NrOfInputs>2</NrOfInputs>
+          <NrOfOutputs>1</NrOfOutputs>
+          <MyProps xsi:type="ActionOperator">
+            <Caption>Action</Caption>
+            <Action>RESET</Action>
+            <Address>$Design.Counter$</Address>
+          </MyProps>
+          <SOffs>
+            <X>0</X>
+            <Y>0</Y>
+          </SOffs>
+        </Operator>
+        <Connector Vis="true">
+          <Caption>452810</Caption>
+          <Edges>
+            <PointF>
+              <X>328</X>
+              <Y>270</Y>
+            </PointF>
+            <PointF>
+              <X>343</X>
+              <Y>270</Y>
+            </PointF>
+            <PointF>
+              <X>369</X>
+              <Y>270</Y>
+            </PointF>
+            <PointF>
+              <X>369</X>
+              <Y>270</Y>
+            </PointF>
+            <PointF>
+              <X>395</X>
+              <Y>270</Y>
+            </PointF>
+            <PointF>
+              <X>410</X>
+              <Y>270</Y>
+            </PointF>
+          </Edges>
+          <Src>7ef244d3-978f-4960-949f-33b3a670b7f1</Src>
+          <Snk>33de0aa3-17fc-4233-be72-e31998ee3f52</Snk>
+        </Connector>
+        <Connector Vis="true">
+          <Caption>502810</Caption>
+          <Edges>
+            <PointF>
+              <X>470</X>
+              <Y>270</Y>
+            </PointF>
+            <PointF>
+              <X>485</X>
+              <Y>270</Y>
+            </PointF>
+            <PointF>
+              <X>525</X>
+              <Y>270</Y>
+            </PointF>
+            <PointF>
+              <X>525</X>
+              <Y>260</Y>
+            </PointF>
+            <PointF>
+              <X>565</X>
+              <Y>260</Y>
+            </PointF>
+            <PointF>
+              <X>580</X>
+              <Y>260</Y>
+            </PointF>
+          </Edges>
+          <Src>39349493-bac8-421e-b3d7-695df14d764e</Src>
+          <Snk>675ce011-9324-45c8-8cad-4adcb6998bb1</Snk>
+        </Connector>
+        <Operator X="930" Y="440" W="60.0000038" H="60.0000038">
+          <Caption>Level detector</Caption>
+          <Contains>
+            <Port Y="30" W="20" H="20">
+              <Caption>S</Caption>
+              <PosHeading>West</PosHeading>
+              <IOIndex>0</IOIndex>
+              <Id>1b4fa81f-4bbc-4125-8cd7-a57e7aa1b023</Id>
+              <InIndex>0</InIndex>
+              <IOType>Input</IOType>
+            </Port>
+            <Port X="60.0000038" Y="30" W="20" H="20">
+              <Caption>S_bool</Caption>
+              <PosHeading>East</PosHeading>
+              <IOIndex>1</IOIndex>
+              <Id>81220dbe-b598-403b-9de7-1144cbf07978</Id>
+              <OutIndex>0</OutIndex>
+              <IOType>Output</IOType>
+            </Port>
+          </Contains>
+          <FromType>eBOperators.LevelDetector</FromType>
+          <Id>aec585f2-9c71-45b2-bac4-c6d3937874f4</Id>
+          <NrOfInputs>1</NrOfInputs>
+          <NrOfOutputs>1</NrOfOutputs>
+          <MyProps xsi:type="FloatLevelDetect">
+            <Caption>Level detector</Caption>
+            <TriggerLevel>60</TriggerLevel>
+            <ResetLevel>0</ResetLevel>
+            <Method>HoldTimePeriod</Method>
+            <HoldTimeSamples>1</HoldTimeSamples>
+            <ValueFixation>FixedHoldTimeSamples</ValueFixation>
+          </MyProps>
+          <SOffs>
+            <X>0</X>
+            <Y>0</Y>
+          </SOffs>
+        </Operator>
+        <Connector Vis="true">
+          <Caption>563110</Caption>
+          <Edges>
+            <PointF>
+              <X>540</X>
+              <Y>400</Y>
+            </PointF>
+            <PointF>
+              <X>555</X>
+              <Y>400</Y>
+            </PointF>
+            <PointF>
+              <X>735</X>
+              <Y>400</Y>
+            </PointF>
+            <PointF>
+              <X>735</X>
+              <Y>470</Y>
+            </PointF>
+            <PointF>
+              <X>915</X>
+              <Y>470</Y>
+            </PointF>
+            <PointF>
+              <X>930</X>
+              <Y>470</Y>
+            </PointF>
+          </Edges>
+          <Src>94103a98-50f9-423c-9fb3-b6dae3035159</Src>
+          <Snk>1b4fa81f-4bbc-4125-8cd7-a57e7aa1b023</Snk>
+        </Connector>
+        <Operator X="1000" Y="250" W="60.0000038" H="60.0000038">
+          <Caption>Action To One Shot</Caption>
+          <Contains>
+            <Port Y="30.0000019" W="20" H="20">
+              <Caption>Any</Caption>
+              <PosHeading>West</PosHeading>
+              <IOIndex>0</IOIndex>
+              <Id>13f9deac-9a06-4b25-b594-46aa959ba066</Id>
+              <InIndex>0</InIndex>
+              <IOType>Input</IOType>
+            </Port>
+            <Port X="60.0000038" Y="30" W="20" H="20">
+              <Caption>one shot</Caption>
+              <PosHeading>East</PosHeading>
+              <IOIndex>1</IOIndex>
+              <Id>80fc6825-6683-40eb-9b18-632fd13de9b6</Id>
+              <OutIndex>0</OutIndex>
+              <IOType>Output</IOType>
+            </Port>
+          </Contains>
+          <FromType>eBBaseLib.ActionToOneShot</FromType>
+          <Id>63752490-589d-446d-bcd8-6b12ae0f4568</Id>
+          <NrOfInputs>1</NrOfInputs>
+          <NrOfOutputs>1</NrOfOutputs>
+          <MyProps xsi:type="ActionToOneShot">
+            <Caption>Action To One Shot</Caption>
+            <OneShotValue>1</OneShotValue>
+            <RestValue>0</RestValue>
+            <Action>START</Action>
+            <Value>leesbarofile</Value>
+            <Address>leesbarofile</Address>
+          </MyProps>
+          <SOffs>
+            <X>0</X>
+            <Y>0</Y>
+          </SOffs>
+        </Operator>
+        <Operator X="1130" Y="260" W="78" H="60.0000038">
+          <Caption>File Replay</Caption>
+          <Contains>
+            <Port X="78" Y="30" W="20" H="20">
+              <Caption>S</Caption>
+              <PosHeading>East</PosHeading>
+              <IOIndex>0</IOIndex>
+              <Id>97855ce8-e896-4bd0-bff9-932c989445ad</Id>
+              <OutIndex>0</OutIndex>
+              <IOType>Output</IOType>
+            </Port>
+          </Contains>
+          <FromType>eBDataExport.Replay</FromType>
+          <Id>2c77ee34-3da9-43e7-a0ea-f00ffb5cef75</Id>
+          <NrOfInputs>0</NrOfInputs>
+          <NrOfOutputs>1</NrOfOutputs>
+          <MyProps xsi:type="FloatReplayer">
+            <Caption>File Replay</Caption>
+            <Channels>
+              <anyType xsi:type="fdeci">
+                <IsUserName>false</IsUserName>
+                <IsUserUnit>false</IsUserUnit>
+                <ChanId>081be36a-9cb3-4159-b4cf-618cffdde812</ChanId>
+                <OrderNr>0</OrderNr>
+                <IsEnabled>true</IsEnabled>
+                <Name>C1</Name>
+                <Unit />
+                <Alias />
+              </anyType>
+            </Channels>
+            <OutputBusID>73428ddc-aa76-45e9-8752-c087d87d53e1</OutputBusID>
+            <LoopPlaying>true</LoopPlaying>
+            <LoopSignalTime>false</LoopSignalTime>
+            <AbsolutePath>$doc$\actueleluchtdruk\barodruk.csv</AbsolutePath>
+            <SyncID>leesbarofile</SyncID>
+            <UseRealTimeOffset>false</UseRealTimeOffset>
+            <Action>None</Action>
+            <Address />
+            <Value />
+          </MyProps>
+          <SOffs>
+            <X>0</X>
+            <Y>0</Y>
+          </SOffs>
+        </Operator>
+        <Operator X="1540" Y="230" W="78" H="60.0000038">
+          <Caption>Numerical Display</Caption>
+          <Contains>
+            <Port Y="30" W="20" H="20">
+              <Caption>S[0]</Caption>
+              <PosHeading>West</PosHeading>
+              <IOIndex>0</IOIndex>
+              <Id>bbbb131d-85cf-430d-a386-d3b12cebefd5</Id>
+              <InIndex>0</InIndex>
+              <IOType>Input</IOType>
+            </Port>
+          </Contains>
+          <FromType>eBFloatViewers.NumericalDisplay</FromType>
+          <Id>1098951f-ac9c-42e8-998b-ab8ddb01bc1b</Id>
+          <NrOfInputs>1</NrOfInputs>
+          <NrOfOutputs>0</NrOfOutputs>
+          <MyProps xsi:type="FloatNumericalDisplay">
+            <Caption>Numerical Display</Caption>
+            <FontName>Verdana</FontName>
+            <FontStdSize>22</FontStdSize>
+            <FontStl>Regular</FontStl>
+            <ContentPaneLeft>5</ContentPaneLeft>
+            <UnitPaneWidth>30</UnitPaneWidth>
+            <TitlePaneHeight>20</TitlePaneHeight>
+            <NumberFormat>&gt;;1</NumberFormat>
+            <InvalidValue />
+            <InvalidValueText />
+            <BackClr>-1</BackClr>
+            <ForeClr>-16777216</ForeClr>
+            <ContentClr>-16777216</ContentClr>
+            <BackColorName>Background</BackColorName>
+            <ForeColorName>Foreground</ForeColorName>
+            <ContentColorName>Foreground</ContentColorName>
+            <BorderStyle>SingleLine</BorderStyle>
+            <Content>InputValues</Content>
+          </MyProps>
+          <SOffs>
+            <X>0</X>
+            <Y>0</Y>
+          </SOffs>
+        </Operator>
+        <ObjectWithUI X="1540" Y="380" W="140" H="65">
+          <Caption>Numerical Display</Caption>
+          <Contains />
+          <EngineId>1098951f-ac9c-42e8-998b-ab8ddb01bc1b</EngineId>
+        </ObjectWithUI>
+        <Connector Vis="true">
+          <Caption>263610</Caption>
+          <Edges>
+            <PointF>
+              <X>1208</X>
+              <Y>290</Y>
+            </PointF>
+            <PointF>
+              <X>1223</X>
+              <Y>290</Y>
+            </PointF>
+            <PointF>
+              <X>1374</X>
+              <Y>290</Y>
+            </PointF>
+            <PointF>
+              <X>1374</X>
+              <Y>260</Y>
+            </PointF>
+            <PointF>
+              <X>1525</X>
+              <Y>260</Y>
+            </PointF>
+            <PointF>
+              <X>1540</X>
+              <Y>260</Y>
+            </PointF>
+          </Edges>
+          <Src>97855ce8-e896-4bd0-bff9-932c989445ad</Src>
+          <Snk>bbbb131d-85cf-430d-a386-d3b12cebefd5</Snk>
+        </Connector>
+        <ActionButton2 X="780" Y="70" W="120" H="50">
+          <Caption>Action Button</Caption>
+          <Contains />
+          <Action>ACTIONSEQUENCE</Action>
+          <ButtonDescriptor>Default</ButtonDescriptor>
+          <ButtonText>Action Button</ButtonText>
+        </ActionButton2>
+        <Operator X="910" Y="160" W="78" H="60.0000038">
+          <Caption>Action Sequence Start</Caption>
+          <Contains>
+            <Port Y="30.0000019" W="20" H="20">
+              <Caption>action or S</Caption>
+              <PosHeading>West</PosHeading>
+              <IOIndex>0</IOIndex>
+              <Id>d1d3c6dc-f380-4d2a-a879-fc3d76b3b8c6</Id>
+              <InIndex>0</InIndex>
+              <IOType>Input</IOType>
+            </Port>
+            <Port X="39" Y="60.0000038" W="20" H="20">
+              <Caption>action or S</Caption>
+              <PosHeading>South</PosHeading>
+              <IOIndex>1</IOIndex>
+              <Id>febeb510-945f-49b7-8eaa-3226127fbccb</Id>
+              <InIndex>1</InIndex>
+              <IOType>Input</IOType>
+            </Port>
+            <Port X="78" Y="30" W="20" H="20">
+              <Caption>action</Caption>
+              <PosHeading>East</PosHeading>
+              <IOIndex>2</IOIndex>
+              <Id>0ed34e0b-6c6a-4cf3-b127-df764803c858</Id>
+              <OutIndex>0</OutIndex>
+              <IOType>Output</IOType>
+            </Port>
+          </Contains>
+          <FromType>eBBaseLib.ActionSequenceStart</FromType>
+          <Id>1d281b8c-8a1c-4293-9fd5-8576b4503357</Id>
+          <NrOfInputs>2</NrOfInputs>
+          <NrOfOutputs>1</NrOfOutputs>
+          <MyProps xsi:type="ActionSeqStart">
+            <Caption>Action Sequence Start</Caption>
+            <TriggerInfo>Index</TriggerInfo>
+            <DelayedCall>0</DelayedCall>
+          </MyProps>
+          <SOffs>
+            <X>0</X>
+            <Y>0</Y>
+          </SOffs>
+        </Operator>
+        <Connector Vis="true">
+          <Caption>295311</Caption>
+          <Edges>
+            <PointF>
+              <X>988</X>
+              <Y>190</Y>
+            </PointF>
+            <PointF>
+              <X>1003</X>
+              <Y>190</Y>
+            </PointF>
+            <PointF>
+              <X>1003</X>
+              <Y>235</Y>
+            </PointF>
+            <PointF>
+              <X>985</X>
+              <Y>235</Y>
+            </PointF>
+            <PointF>
+              <X>985</X>
+              <Y>280</Y>
+            </PointF>
+            <PointF>
+              <X>1000</X>
+              <Y>280</Y>
+            </PointF>
+          </Edges>
+          <Src>0ed34e0b-6c6a-4cf3-b127-df764803c858</Src>
+          <Snk>13f9deac-9a06-4b25-b594-46aa959ba066</Snk>
+        </Connector>
+      </Contains>
+      <NameSpace>Main</NameSpace>
+      <BackColor>DesignBackground</BackColor>
+      <Description>Main design page.</Description>
+      <Author />
+      <Id>5b8bfe59-800e-4371-859f-ccf45eb5a339</Id>
+      <GridSize>10</GridSize>
+      <PageFormat>design 6400 x 5120</PageFormat>
+      <PageType>design</PageType>
+      <ZoomFactor>1</ZoomFactor>
+      <ViewWindow>
+        <Location>
+          <X>-10</X>
+          <Y>-10</Y>
+        </Location>
+        <Size>
+          <Width>1899</Width>
+          <Height>811</Height>
+        </Size>
+        <X>-10</X>
+        <Y>-10</Y>
+        <Width>1899</Width>
+        <Height>811</Height>
+      </ViewWindow>
+      <Protected>false</Protected>
+    </Page>
+  </Contains>
+  <IsReadOnly>false</IsReadOnly>
+  <Description />
+  <Author>Applied Biosignals GmbH</Author>
+  <HelpURL />
+  <Copyright />
+  <Version />
+  <StartPage />
+  <ReviewPage />
+  <MainWindowBounds>
+    <Location>
+      <X>0</X>
+      <Y>0</Y>
+    </Location>
+    <Size>
+      <Width>0</Width>
+      <Height>0</Height>
+    </Size>
+    <X>0</X>
+    <Y>0</Y>
+    <Width>0</Width>
+    <Height>0</Height>
+  </MainWindowBounds>
+  <IsPostProcess>true</IsPostProcess>
+  <Repositories>
+    <ImageRepository>
+      <Images />
+    </ImageRepository>
+    <ColorRepository>
+      <Colors>
+        <ColorABS Data="-16777216" Name="Foreground" />
+        <ColorABS Data="-1" Name="Background" />
+        <ColorABS Data="-2147458159" Name="Grid" />
+        <ColorABS Data="-1" Name="BackgroundControl" />
+        <ColorABS Data="-65536" Name="Warning" />
+        <ColorABS Data="-986896" Name="DialogBackground" />
+        <ColorABS Data="-31" Name="InfoBackground" />
+        <ColorABS Data="-986896" Name="FirstPanelBackground" />
+        <ColorABS Data="-986896" Name="SecondPanelBackground" />
+        <ColorABS Data="-1" Name="DesignBackground" />
+      </Colors>
+    </ColorRepository>
+    <BorderRepository>
+      <Borders>
+        <BorderObject Name="None" />
+        <SimpleBorder Name="Default">
+          <ColorBackground>Background</ColorBackground>
+          <ColorForeground>Foreground</ColorForeground>
+        </SimpleBorder>
+      </Borders>
+    </BorderRepository>
+    <FontRepository>
+      <Fonts>
+        <FontABS Fnt="Segoe UI" Stl="Regular" Sz="10" Name="Default" />
+        <FontABS Fnt="Segoe UI" Stl="Regular" Sz="8" Name="Default Small" />
+        <FontABS Fnt="Segoe UI" Stl="Regular" Sz="14" Name="Default Large" />
+      </Fonts>
+    </FontRepository>
+    <ButtonRepository>
+      <Buttons>
+        <ButtonDescriptor ButtonStyle="Auto3D" Name="Default" />
+      </Buttons>
+    </ButtonRepository>
+  </Repositories>
+  <Action>None</Action>
+  <Value />
+  <Address />
+  <ActionOnExit>EXIT,,</ActionOnExit>
+  <Protected>false</Protected>
+</eBiosig_General_Project>
